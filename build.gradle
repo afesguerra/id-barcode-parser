@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'io.franzbecker.gradle-lombok' version '1.14'
 }
 
 group 'com.afesguerra.colombia'
@@ -12,5 +13,8 @@ repositories {
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    implementation group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
+    runtimeOnly group: 'org.slf4j', name: 'slf4j-log4j12', version: '1.7.25'
+    testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.3.2'
+    testRuntime group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: '5.3.2'
 }
